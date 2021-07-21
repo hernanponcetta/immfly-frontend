@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
 } from "react-router-dom";
 
 import usePokemonList from "./custom-hooks/usePokemonList";
 import urlParse from "./utils/urlParse";
 
-import { Main, Container, TopWrapper } from "./components/commons/commons";
-import PokeLogo from "./components/PokeLogo";
-import IfyLogo from "./components/IfyLogo";
-import PokemonsWrapper from "./components/PokemonsWrapper";
-import PokemonThumbail from "./components/PokemonThumbail";
-import PokemonCard from "./components/PokemonCard";
+import { Main, Container, TopWrapper } from "./components/commons";
+import LogosWrapper from "./components/logos-wrapper/LogosWrapper";
+import PokemonsWrapper from "./components/pokemons-wrapper/PokemonsWrapper";
+import PokemonThumbail from "./components/pokemon-thumbail/PokemonThumbail";
+import PokemonCard from "./components/pokemon-card/PokemonCard";
 
 const App = () => {
   const pokemonsList = usePokemonList();
@@ -27,14 +25,16 @@ const App = () => {
           <Switch>
             {pokemonsList.status === "loaded" &&
               pokemonsList.data?.results.map((pokemon) => (
-                <Route path={`/pokemon/${pokemon.name}`}>
+                <Route
+                  key={urlParse(pokemon.url)}
+                  path={`/pokemon/${pokemon.name}`}
+                >
                   <PokemonCard url={pokemon.url} />
                 </Route>
               ))}
             <Route path="/pokemon">
               <TopWrapper>
-                <IfyLogo />
-                <PokeLogo />
+                <LogosWrapper />
               </TopWrapper>
               <PokemonsWrapper>
                 {pokemonsList.status === "loading" && <div>Loading...</div>}
@@ -42,7 +42,6 @@ const App = () => {
                   pokemonsList.data?.results.map((pokemon) => (
                     <PokemonThumbail
                       key={urlParse(pokemon.url)}
-                      src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon.name}.gif`}
                       name={pokemon.name}
                     />
                   ))}

@@ -1,11 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 
-export const Main = styled.div`
+export const Main = styled.main`
   background-color: #f3f1f1;
   box-sizing: border-box;
   overflow: auto;
-  height: 100vmin;
+  height: 100vmax;
 `;
 
 export const Container = styled.div`

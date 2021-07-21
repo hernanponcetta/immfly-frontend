@@ -1,21 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-import poke_logo from "../assets/poke_logo.png";
+import ify_logo from "../../assets/ify_logo.png";
 
 const ImageWrapper = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1.5rem;
   text-align: center;
 `;
 
-const PokeLogo = () => {
+const IfyLogo = () => {
   return (
     <ImageWrapper>
-      <img src={poke_logo} alt="Pokemon Logo" />
+      <img width="50px" src={ify_logo} alt="Immfly logo" />
     </ImageWrapper>
   );
 };
 
-export default PokeLogo;
+export default IfyLogo;

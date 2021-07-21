@@ -1,4 +1,3 @@
-import { type } from "os";
 import { useState, useEffect } from "react";
 
 interface Abilitie {
@@ -21,7 +20,7 @@ interface Pokemon {
   types: Type[];
 }
 
-interface Results {
+export interface Results {
   status: "loading" | "loaded" | "error";
   data?: Pokemon;
   error?: Error;

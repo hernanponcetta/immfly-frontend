@@ -1,22 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 
-import ify_logo from "../assets/ify_logo.png";
+import poke_logo from "../../assets/poke_logo.png";
 
 const ImageWrapper = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem;
   text-align: center;
 `;
 
-const IfyLogo = () => {
+const StyledImg = styled.img`
+  max-width: 100%;
+`;
+
+const PokeLogo = () => {
   return (
     <ImageWrapper>
-      <img width="50px" src={ify_logo} alt="Pokemon Logo" />
+      <StyledImg src={poke_logo} alt="Pokemon Logo" />
     </ImageWrapper>
   );
 };
 
-export default IfyLogo;
+export default PokeLogo;

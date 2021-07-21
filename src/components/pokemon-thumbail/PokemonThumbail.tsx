@@ -1,14 +1,8 @@
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import { ImageWrapper, Label } from "./commons/commons";
+import { ImageWrapper, Label } from "../commons";
 
 const StyledDiv = styled.div`
   border: 1px solid black;
@@ -33,17 +27,15 @@ const StyledLink = styled(Link)`
   color: black;
 `;
 
-interface PokemonThumbailProps {
-  name: string;
-  src: string;
-}
-
-const PokemonThumbail = ({ name, src }: PokemonThumbailProps) => {
+const PokemonThumbail = ({ name }: { name: string }) => {
   return (
     <StyledLink to={`/pokemon/${name}`}>
       <StyledDiv>
         <ImageWrapper>
-          <StyledImg src={src}></StyledImg>
+          <StyledImg
+            src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`}
+            alt={name}
+          />
         </ImageWrapper>
         <Label>{name}</Label>
       </StyledDiv>
