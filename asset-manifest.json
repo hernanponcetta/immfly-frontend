@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/immfly-frontend/static/css/main.7176885d.chunk.css",
-    "main.js": "/immfly-frontend/static/js/main.a56cd4d6.chunk.js",
-    "main.js.map": "/immfly-frontend/static/js/main.a56cd4d6.chunk.js.map",
+    "main.js": "/immfly-frontend/static/js/main.edb34e88.chunk.js",
+    "main.js.map": "/immfly-frontend/static/js/main.edb34e88.chunk.js.map",
     "runtime-main.js": "/immfly-frontend/static/js/runtime-main.09ecaef1.js",
     "runtime-main.js.map": "/immfly-frontend/static/js/runtime-main.09ecaef1.js.map",
     "static/css/2.bc922b9c.chunk.css": "/immfly-frontend/static/css/2.bc922b9c.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.bc922b9c.chunk.css",
     "static/js/2.5ea29f14.chunk.js",
     "static/css/main.7176885d.chunk.css",
-    "static/js/main.a56cd4d6.chunk.js"
+    "static/js/main.edb34e88.chunk.js"
   ]
 }
