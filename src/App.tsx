@@ -37,7 +37,6 @@ const App = () => {
                 <LogosWrapper />
               </TopWrapper>
               <PokemonsWrapper>
-                {pokemonsList.status === "loading" && <div>Loading...</div>}
                 {pokemonsList.status === "loaded" &&
                   pokemonsList.data?.results.map((pokemon) => (
                     <PokemonThumbail
