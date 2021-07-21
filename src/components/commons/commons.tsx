@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Main = styled.main`
   background-color: #f3f1f1;
   box-sizing: border-box;
+  min-height: 100vh;
   overflow: auto;
-  height: 100vmax;
 `;
 
 export const Container = styled.div`

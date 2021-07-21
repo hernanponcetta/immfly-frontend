@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   padding: 2rem;
   @media (max-width: 860px) {
     grid-template-columns: repeat(2, 1fr);

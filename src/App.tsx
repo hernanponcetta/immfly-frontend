@@ -47,7 +47,7 @@ const App = () => {
                   ))}
               </PokemonsWrapper>
             </Route>
-            <Route path="/">
+            <Route path="*">
               <Redirect to="/pokemon" />
             </Route>
           </Switch>
