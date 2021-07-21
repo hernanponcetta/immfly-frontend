@@ -22,7 +22,7 @@ const usePokemonList = () => {
   });
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=150")
+    fetch("https://pokeapi.co/api/v2/pokemon?offset=0&limit=151")
       .then((response) => response.json())
       .then((response) => setResult({ status: "loaded", data: response }))
       .catch((error) => setResult({ status: "error", error }));

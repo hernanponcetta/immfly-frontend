@@ -3,50 +3,24 @@ import styled from "styled-components";
 import usePokemonData from "../../custom-hooks/usePokemonData";
 import { Link } from "react-router-dom";
 
-import { ImageWrapper, Label } from "../commons/commons";
+import { ImageWrapper, Label } from "../commons";
+
+import {
+  StyledDiv,
+  LinkContainer,
+  LabelWrapper,
+  StyledField,
+  Ul,
+} from "./commons";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
 
 interface PokemonCardProps {
   url: string;
 }
-
-const StyledDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  box-sizing: border-box;
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 350px;
-  border: 1px solid black;
-  margin-top: 3rem;
-  padding: 2rem 1.5rem;
-`;
-
-const LabelWrapper = styled.div`
-  box-sizing: border-box;
-  padding: 10px 0;
-`;
-
-const Ul = styled.ul`
-  margin: 0;
-`;
-
-const LinkContainer = styled.div`
-  box-sizing: border-box;
-  margin-left: auto;
-  padding: 0.5rem 0;
-`;
-
-const StyledField = styled.div`
-  box-sizing: border-box;
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
-`;
 
 const PokemonCard = ({ url }: PokemonCardProps) => {
   const pokemonData = usePokemonData(url);
